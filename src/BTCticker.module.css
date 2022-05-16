@@ -1,0 +1,18 @@
+.btcTickerContainer {
+  background-color: darkgray;
+  height: 100vh;
+  padding: 1em;
+}
+
+.headerClass {
+  width: 100%;
+  display: flex;
+  font-size: 3em;
+  line-height: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.btcLogoClass {
+  max-height: 110px;
+}
