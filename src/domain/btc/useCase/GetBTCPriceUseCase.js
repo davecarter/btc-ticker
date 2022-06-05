@@ -1,5 +1,5 @@
-import { HttpRepository } from "../../repository/HttpRepository"
-import { CryptoCoinValueObject } from "../../model/CryptoCoinValueObject"
+import { HttpRepository } from "../repository/HttpRepository"
+import { CryptoCoinValueObject } from "../model/CryptoCoinValueObject"
 
 export class GetBTCPriceUseCase {
   static create() {
@@ -11,8 +11,16 @@ export class GetBTCPriceUseCase {
     this._repository = repository
   }
 
-  execute({ cryptoCoin }) {
-    const cryptoCoinVO = CryptoCoinValueObject.create({ cryptoCoin })
-    return this._repository.getBTCPrice({ cryptoCoin: cryptoCoinVO })
+  async execute({ cryptoCoin, fiatCurrency }) {
+    const cryptoCoinVO = CryptoCoinValueObject.create({
+      fiatCurrency,
+      coinType: cryptoCoin,
+    })
+
+    const cryptoCoinResponseVO = await this._repository.getBTCPrice({
+      cryptoCoinVO,
+    })
+
+    return cryptoCoinResponseVO.serialize()
   }
 }
