@@ -4,6 +4,12 @@
   padding: 1em;
 }
 
+.btcLogoContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
 .headerClass {
   width: 100%;
   display: flex;
@@ -14,5 +20,7 @@
 }
 
 .btcLogoClass {
-  max-height: 110px;
+  height: auto;
+  max-width: 110px;
+  align-self: center;
 }
