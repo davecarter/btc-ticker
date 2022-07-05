@@ -1,26 +1,27 @@
 .btcTickerContainer {
-  background-color: darkgray;
+  background-color: black;
+  color: white;
+  display: flex;
   height: 100vh;
-  padding: 1em;
+  padding: 0;
 }
 
-.btcLogoContainer {
+.btcPriceContainer {
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0 auto;
 }
 
 .headerClass {
-  width: 100%;
+  align-items: center;
   display: flex;
-  font-size: 3em;
+  font-size: 4em;
   line-height: 0;
   margin: 0;
-  align-items: center;
+  width: 100%;
 }
 
-.btcLogoClass {
-  height: auto;
-  max-width: 110px;
-  align-self: center;
+.btcStyle {
+  letter-spacing: -5px;
 }
