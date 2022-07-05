@@ -4,7 +4,8 @@ import { formattedValue } from "./utils/formattedValue"
 import {
   btcTickerContainer,
   headerClass,
-  btcLogoContainer,
+  btcPriceContainer,
+  btcStyle,
 } from "./BTCticker.module.css"
 
 function BTCticker() {
@@ -37,6 +38,7 @@ function BTCticker() {
   const toggleFullscreen = () => {
     if (!isFullscreen) {
       element.requestFullscreen()
+      element.webkitRequestFullscreen()
       setIsFullscreen(true)
     }
 
@@ -49,8 +51,8 @@ function BTCticker() {
   return (
     <div className={btcTickerContainer}>
       <header className={headerClass}>
-        <div onClick={toggleFullscreen} className={btcLogoContainer}>
-          <h1>{btcPrice}</h1>
+        <div onClick={toggleFullscreen} className={btcPriceContainer}>
+          <h1 className={btcStyle}>{btcPrice}</h1>
         </div>
       </header>
     </div>
