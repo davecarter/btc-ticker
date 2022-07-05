@@ -11,7 +11,8 @@
     "axios": "^0.27.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "vite-plugin-css-modules": "0.0.1"
+    "vite-plugin-css-modules": "0.0.1",
+    "websocket": "^1.0.34"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
